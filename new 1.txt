@@ -1,0 +1,25 @@
+Projekt setup:
+npm init -y
+pakage letoltes
+npm install express
+Dev packages
+npm install -D nodemon
+Package deletion
+npm remove  <package name>
+-------------------------------------
+App.js 
+const express=require("express");
+const app=express();
+const PORT =8000;
+
+app.get("/hello",(request,response,next)=>
+{
+	response.send("Taco tuesday);
+})
+
+app.listen(PORT,()=>
+{
+console.log(`Backen started listening on port ${PORT}`);
+});
+
+module.exports=app;
